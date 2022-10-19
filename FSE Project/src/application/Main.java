@@ -12,7 +12,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("Sample.fxml"));
+			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("Home.fxml"));
 			Scene scene = new Scene(root,400,850);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setTitle("FSE Interaction Application");
