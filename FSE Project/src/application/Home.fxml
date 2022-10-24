@@ -16,10 +16,10 @@
          <children>
             <Label prefHeight="100.0" prefWidth="400.0" text="Main Menu">
                <padding>
-                  <Insets left="100.0" />
+                  <Insets left="90.0" />
                </padding>
                <font>
-                  <Font size="40.0" />
+                  <Font name="System Bold" size="40.0" />
                </font>
             </Label>
          </children>
@@ -32,7 +32,7 @@
                <children>
                   <VBox prefHeight="217.0" prefWidth="400.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#loadCircle" prefHeight="55.0" prefWidth="400.0" text="Circle Tracing Game">
+                        <Button mnemonicParsing="false" onAction="#loadCircle" prefHeight="55.0" prefWidth="400.0" style="-fx-background-color: DODGERBLUE;" text="Circle Tracing Game">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -55,8 +55,58 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox prefHeight="216.666" prefWidth="400.0" />
-            <HBox prefHeight="216.666" prefWidth="400.0" />
+            <HBox prefHeight="216.666" prefWidth="400.0">
+               <children>
+                  <VBox prefHeight="217.0" prefWidth="400.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#loadReaction" prefHeight="55.0" prefWidth="400.0" style="-fx-background-color: DODGERBLUE;" text="Reaction Time Game">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <HBox prefHeight="163.0" prefWidth="400.0">
+                           <children>
+                              <Label prefHeight="163.0" prefWidth="200.0" text="In this challenge you will practice &#10;your reaction time by selecting &#10;the correct circle when the game&#10;prompt appears" textAlignment="CENTER">
+                                 <padding>
+                                    <Insets left="15.0" />
+                                 </padding>
+                              </Label>
+                              <ImageView fitHeight="163.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/placeholder.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children></HBox>
+            <HBox prefHeight="216.666" prefWidth="400.0">
+               <children>
+                  <VBox prefHeight="217.0" prefWidth="400.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#loadMatching" prefHeight="55.0" prefWidth="400.0" style="-fx-background-color: DODGERBLUE;" text="Matching Game">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <HBox prefHeight="163.0" prefWidth="400.0">
+                           <children>
+                              <Label prefHeight="163.0" prefWidth="200.0" text="In this challenge you will practice &#10;your motor skills and cognitive &#10;skills by selecting matching tiles" textAlignment="CENTER">
+                                 <padding>
+                                    <Insets left="15.0" />
+                                 </padding>
+                              </Label>
+                              <ImageView fitHeight="163.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/placeholder.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children></HBox>
          </children>
       </VBox>
    </center>

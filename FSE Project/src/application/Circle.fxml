@@ -9,9 +9,9 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#circleGame" onMouseReleased="#circleGame" onTouchPressed="#circleGame" onTouchReleased="#circleGame" prefHeight="850.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <bottom>
-      <Button mnemonicParsing="false" onAction="#loadHome" prefHeight="100.0" prefWidth="400.0" text="Back" BorderPane.alignment="CENTER">
+      <Button mnemonicParsing="false" onAction="#loadHome" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: DODGERBLUE;" text="Back" BorderPane.alignment="CENTER">
          <font>
             <Font size="40.0" />
          </font>
@@ -22,10 +22,10 @@
          <children>
             <Label prefHeight="100.0" prefWidth="400.0" text="Circle Tracing Game" textAlignment="CENTER">
                <font>
-                  <Font size="40.0" />
+                  <Font name="System Bold" size="40.0" />
                </font>
                <padding>
-                  <Insets left="22.0" />
+                  <Insets left="14.0" />
                </padding>
             </Label>
             <Label fx:id="scoreLbl" prefHeight="100.0" prefWidth="400.0" text="Score: " textAlignment="CENTER">
@@ -43,7 +43,7 @@
       <StackPane BorderPane.alignment="CENTER">
          <children>
             <Circle fx:id="circle" fill="DODGERBLUE" radius="155.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-            <Button fx:id="finishCircleBtn" mnemonicParsing="false" onAction="#endCG" prefHeight="32.0" prefWidth="82.0" text="Finish">
+            <Button fx:id="finishCircleBtn" mnemonicParsing="false" onAction="#endCG" prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: DODGERBLUE;" text="Finish">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
