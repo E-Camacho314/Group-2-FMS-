@@ -1,6 +1,7 @@
 package application;
 
 import java.io.IOException;
+import java.util.concurrent.ThreadLocalRandom;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,13 +21,17 @@ public class Controller{
     private BorderPane rootPane;
     
     @FXML
-    private Label scoreLbl, timeLbl;
+    private Label scoreLbl;
+
+	@FXML
+	private Label timeLbl;
     
     @FXML 
     private Button B1, B2, B3, B4, B5, B6, B7, B8, B9, startRG;
 	
+    private long startTime, reactionTime;
+    private int randomNum;
 	private static CircleGame cg;
-	private static ReactionGame rg;
 	private static MatchingGame mg;
 	
 	
@@ -62,13 +67,81 @@ public class Controller{
 		}
 		scoreLbl.setText("Score: " + (int)cg.getResult() + "%");
 	}
-	
-	public void startRG(ActionEvent e) {
-		//System.out.println(B1 + " " + B2 + " " + timeLbl + " " + B5.getText() + " " + e.getSource() + "\n" + e.getSource().equals(B5) + " " + B5.getText()); DEBUG LINE
+		
+	public void rgHandler(ActionEvent e) {
+		if (e.getSource().equals(B1) && randomNum == 1) {
+			reactionTime = System.currentTimeMillis() - startTime;
+			timeLbl.setText("Reaction Time: " + reactionTime + "ms");
+		}
+		else if (e.getSource().equals(B2) && randomNum == 2) {
+			reactionTime = System.currentTimeMillis() - startTime;
+			timeLbl.setText("Reaction Time: " + reactionTime + "ms");
+		}
+		else if (e.getSource().equals(B3) && randomNum == 3) {
+			reactionTime = System.currentTimeMillis() - startTime;
+			timeLbl.setText("Reaction Time: " + reactionTime + "ms");
+		}
+		else if (e.getSource().equals(B4) && randomNum == 4) {
+			reactionTime = System.currentTimeMillis() - startTime;
+			timeLbl.setText("Reaction Time: " + reactionTime + "ms");
+		}
+		else if (e.getSource().equals(B5) && randomNum == 5) {
+			reactionTime = System.currentTimeMillis() - startTime;
+			timeLbl.setText("Reaction Time: " + reactionTime + "ms");
+		}
+		else if (e.getSource().equals(B6) && randomNum == 6) {
+			reactionTime = System.currentTimeMillis() - startTime;
+			timeLbl.setText("Reaction Time: " + reactionTime + "ms");
+		}
+		else if (e.getSource().equals(B7) && randomNum == 7) {
+			reactionTime = System.currentTimeMillis() - startTime;
+			timeLbl.setText("Reaction Time: " + reactionTime + "ms");
+		}
+		else if (e.getSource().equals(B8) && randomNum == 8) {
+			reactionTime = System.currentTimeMillis() - startTime;
+			timeLbl.setText("Reaction Time: " + reactionTime + "ms");
+		}
+		else if (e.getSource().equals(B9) && randomNum == 9) {
+			reactionTime = System.currentTimeMillis() - startTime;
+			timeLbl.setText("Reaction Time: " + reactionTime + "ms");
+		}
+		else {
+			timeLbl.setText("Incorrect - Try Again!");
+		}
+		
 		if (e.getSource().equals(B5) && B5.getText().equals("CLICK TO START")) {
-			System.out.println("start");
+			startTime = System.currentTimeMillis();
 			B5.setText("");
-			rg = new ReactionGame(rootPane, B1, B2, B3, B4, B5, B6, B7, B8, B9);
+			randomNum =  ThreadLocalRandom.current().nextInt(1, 10); //Random int 1-9
+			switch(randomNum) {
+				case 1:
+					timeLbl.setText("Pick the BLACK Button");
+					break;
+				case 2:
+					timeLbl.setText("Pick the GREEN Button");
+					break;
+				case 3:
+					timeLbl.setText("Pick the BLUE Button");
+					break;
+				case 4:
+					timeLbl.setText("Pick the PURPLE Button");
+					break;
+				case 5:
+					timeLbl.setText("Pick the WHITE Button");
+					break;
+				case 6:
+					timeLbl.setText("Pick the RED Button");
+					break;
+				case 7:
+					timeLbl.setText("Pick the YELLOW Button");
+					break;
+				case 8:
+					timeLbl.setText("Pick the BROWN Button");
+					break;
+				case 9:
+					timeLbl.setText("Pick the ORANGE Button");
+					break;
+			}
 		}
 	}
 }
