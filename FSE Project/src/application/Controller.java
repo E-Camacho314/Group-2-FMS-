@@ -31,6 +31,7 @@ public class Controller{
 	
     private long startTime, reactionTime;
     private int randomNum;
+    private boolean endRG;
 	private static CircleGame cg;
 	private static MatchingGame mg;
 	
@@ -50,6 +51,7 @@ public class Controller{
 	public void loadReaction(ActionEvent e) throws IOException{
 		BorderPane pane = FXMLLoader.load(getClass().getResource("Reaction.fxml"));
 		rootPane.getChildren().setAll(pane);
+		endRG = false;
 	}
 	
 	public void loadMatching(ActionEvent e) throws IOException{
@@ -72,44 +74,55 @@ public class Controller{
 	}
 		
 	public void rgHandler(ActionEvent e) {
-		if (e.getSource().equals(B1) && randomNum == 1) {
+		if (e.getSource().equals(B1) && randomNum == 1 && endRG == false) {
 			reactionTime = System.currentTimeMillis() - startTime;
 			timeLbl.setText("Reaction Time: " + reactionTime + "ms");
+			endRG = true;
 		}
-		else if (e.getSource().equals(B2) && randomNum == 2) {
+		else if (e.getSource().equals(B2) && randomNum == 2 && endRG == false) {
 			reactionTime = System.currentTimeMillis() - startTime;
 			timeLbl.setText("Reaction Time: " + reactionTime + "ms");
+			endRG = true;
 		}
-		else if (e.getSource().equals(B3) && randomNum == 3) {
+		else if (e.getSource().equals(B3) && randomNum == 3 && endRG == false) {
 			reactionTime = System.currentTimeMillis() - startTime;
 			timeLbl.setText("Reaction Time: " + reactionTime + "ms");
+			endRG = true;
 		}
-		else if (e.getSource().equals(B4) && randomNum == 4) {
+		else if (e.getSource().equals(B4) && randomNum == 4 && endRG == false) {
 			reactionTime = System.currentTimeMillis() - startTime;
 			timeLbl.setText("Reaction Time: " + reactionTime + "ms");
+			endRG = true;
 		}
-		else if (e.getSource().equals(B5) && randomNum == 5) {
+		else if (e.getSource().equals(B5) && randomNum == 5 && endRG == false) {
 			reactionTime = System.currentTimeMillis() - startTime;
 			timeLbl.setText("Reaction Time: " + reactionTime + "ms");
+			endRG = true;
 		}
-		else if (e.getSource().equals(B6) && randomNum == 6) {
+		else if (e.getSource().equals(B6) && randomNum == 6 && endRG == false) {
 			reactionTime = System.currentTimeMillis() - startTime;
 			timeLbl.setText("Reaction Time: " + reactionTime + "ms");
+			endRG = true;
 		}
-		else if (e.getSource().equals(B7) && randomNum == 7) {
+		else if (e.getSource().equals(B7) && randomNum == 7 && endRG == false) {
 			reactionTime = System.currentTimeMillis() - startTime;
 			timeLbl.setText("Reaction Time: " + reactionTime + "ms");
+			endRG = true;
 		}
-		else if (e.getSource().equals(B8) && randomNum == 8) {
+		else if (e.getSource().equals(B8) && randomNum == 8 && endRG == false) {
 			reactionTime = System.currentTimeMillis() - startTime;
 			timeLbl.setText("Reaction Time: " + reactionTime + "ms");
+			endRG = true;
 		}
-		else if (e.getSource().equals(B9) && randomNum == 9) {
+		else if (e.getSource().equals(B9) && randomNum == 9 && endRG == false) {
 			reactionTime = System.currentTimeMillis() - startTime;
 			timeLbl.setText("Reaction Time: " + reactionTime + "ms");
+			endRG = true;
 		}
 		else {
-			timeLbl.setText("Incorrect - Try Again!");
+			if (endRG == false) {
+				timeLbl.setText("Incorrect - Try Again!");
+			}
 		}
 		
 		if (e.getSource().equals(B5) && B5.getText().equals("CLICK TO START")) {
@@ -147,4 +160,6 @@ public class Controller{
 			}
 		}
 	}
+	
+	
 }
