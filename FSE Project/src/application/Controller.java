@@ -27,7 +27,7 @@ public class Controller{
 	private Label timeLbl;
     
     @FXML 
-    private Button B1, B2, B3, B4, B5, B6, B7, B8, B9, startRG;
+    private Button B1, B2, B3, B4, B5, B6, B7, B8, B9, startRG, finishCG;
 	
     private long startTime, reactionTime;
     private int randomNum;
@@ -61,11 +61,14 @@ public class Controller{
 	public void endCG (ActionEvent e) {
 		if (cg.getResult() >= 75) {
 			circle.setFill(Color.GREEN);
+			finishCG.setStyle("-fx-background-color:#00FF00");
 		}
 		else {
 			circle.setFill(Color.RED);
+			finishCG.setStyle("-fx-background-color:#FF0000");		
 		}
 		scoreLbl.setText("Score: " + (int)cg.getResult() + "%");
+		cg.setFinished(true);
 	}
 		
 	public void rgHandler(ActionEvent e) {

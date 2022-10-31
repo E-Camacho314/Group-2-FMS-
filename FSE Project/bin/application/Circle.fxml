@@ -43,7 +43,7 @@
       <StackPane BorderPane.alignment="CENTER">
          <children>
             <Circle fx:id="circle" fill="DODGERBLUE" radius="155.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-            <Button mnemonicParsing="false" onAction="#endCG" prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: DODGERBLUE;" text="Finish">
+            <Button fx:id="finishCG" mnemonicParsing="false" onAction="#endCG" prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: DODGERBLUE;" text="Finish">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
