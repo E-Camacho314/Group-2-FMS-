@@ -6,6 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
@@ -27,13 +28,19 @@ public class Controller{
 	private Label timeLbl;
     
     @FXML 
-    private Button B1, B2, B3, B4, B5, B6, B7, B8, B9, startRG, finishCG;
+    private Button B1, B2, B3, B4, B5, B6, B7, B8, B9;
+    
+    @FXML
+    private Button M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M12, M13, M14, M15, M16;
+    
+    @FXML
+    private Button startRG, finishCG, startMG;
 	
+    private String[] shapes = {"▲", "■", "▰", "◆", "◕", "◍", "▬", "▼"};
     private long startTime, reactionTime;
     private int randomNum;
     private boolean endRG;
 	private static CircleGame cg;
-	private static MatchingGame mg;
 	
 	
 	public void loadHome(ActionEvent e) throws IOException{
@@ -57,7 +64,6 @@ public class Controller{
 	public void loadMatching(ActionEvent e) throws IOException{
 		BorderPane pane = FXMLLoader.load(getClass().getResource("Matching.fxml"));
 		rootPane.getChildren().setAll(pane);
-		mg = new MatchingGame(rootPane);
 	}
 	
 	public void endCG (ActionEvent e) {
@@ -72,7 +78,9 @@ public class Controller{
 		scoreLbl.setText("Score: " + (int)cg.getResult() + "%");
 		cg.setFinished(true);
 	}
-		
+	
+	
+	
 	public void rgHandler(ActionEvent e) {
 		if (e.getSource().equals(B1) && randomNum == 1 && endRG == false) {
 			reactionTime = System.currentTimeMillis() - startTime;
@@ -161,5 +169,17 @@ public class Controller{
 		}
 	}
 	
+	public void MatchingGame(ActionEvent e) {
+		startMG.setText("Game in progress...");
+		startMG.setAlignment(Pos.CENTER_LEFT);
+		MatchingGameButton(e);
+		startMG.setOnAction(null);
+	}
 	
+	public void MatchingGameButton(ActionEvent e) {
+		if (startMG.getText().equals("Game in progress...")) {
+			randomNum =  ThreadLocalRandom.current().nextInt(0, 8); //Random 0-7
+			M1.setText(shapes[randomNum]);
+		}
+	}
 }

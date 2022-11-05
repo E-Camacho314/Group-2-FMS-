@@ -56,7 +56,7 @@ public class CircleGame {
 						distance = Math.sqrt(Math.pow((double)c.getCenterY()-475, 2) + Math.pow((double)c.getCenterX()-200, 2));
 						total ++;
 						
-						if (distance >= 150 && distance <= 160) { //difficulty can change based on leniency of distance
+						if (distance >= 147 && distance <= 163) { //difficulty can change based on leniency of distance
 							accurate ++;
 						}
 					}

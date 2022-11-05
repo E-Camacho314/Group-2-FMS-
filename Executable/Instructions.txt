@@ -1,0 +1,7 @@
+Here are the steps to run the FSEProject.jar file
+
+1) Download JavaFX19 and the FSEProject.jar file
+2) Open command prompt and type the following
+	cd "FOLDER WITH FSEPROJECT.JAR"
+	java -jar --module-path "PATH TO JAVAFX19 LIB FOLDER" --add-modules javafx.controls,javafx.fxml FSEProject.jar
+3) The application should run once those two commands are sent
