@@ -1,8 +1,14 @@
 package application;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.TimeUnit;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +18,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.util.Duration;
 
 public class Controller{
 
@@ -37,8 +44,9 @@ public class Controller{
     private Button startRG, finishCG, startMG;
 	
     private String[] shapes = {"▲", "■", "▰", "◆", "◕", "◍", "▬", "▼"};
+    private ArrayList<Button> mgButtons, matchTestArray;
     private long startTime, reactionTime;
-    private int randomNum;
+    private int randomNum, randomButton, cardsFlipped, matched;
     private boolean endRG;
 	private static CircleGame cg;
 	
@@ -169,17 +177,162 @@ public class Controller{
 		}
 	}
 	
-	public void MatchingGame(ActionEvent e) {
-		startMG.setText("Game in progress...");
-		startMG.setAlignment(Pos.CENTER_LEFT);
-		MatchingGameButton(e);
-		startMG.setOnAction(null);
+	public void MatchingGame(ActionEvent e) throws InterruptedException {
+		if (startMG.getText().equals("CLICK TO RANDOMIZE CARDS")) {
+			MatchingGameButton(e);
+			matchTestArray = new ArrayList<Button>();
+			cardsFlipped = 0;
+			matched = 0;
+		}
+		else if (startMG.getText().equals("CLICK TO BEGIN MATCHING")) {
+			System.out.println("start");
+			startTime = System.currentTimeMillis();
+			
+			M1.setStyle("-fx-text-fill: transparent");
+			M2.setStyle("-fx-text-fill: transparent");
+			M3.setStyle("-fx-text-fill: transparent");
+			M4.setStyle("-fx-text-fill: transparent");
+			M5.setStyle("-fx-text-fill: transparent");
+			M6.setStyle("-fx-text-fill: transparent");
+			M7.setStyle("-fx-text-fill: transparent");
+			M8.setStyle("-fx-text-fill: transparent");
+			M9.setStyle("-fx-text-fill: transparent");
+			M10.setStyle("-fx-text-fill: transparent");
+			M11.setStyle("-fx-text-fill: transparent");
+			M12.setStyle("-fx-text-fill: transparent");
+			M13.setStyle("-fx-text-fill: transparent");
+			M14.setStyle("-fx-text-fill: transparent");
+			M15.setStyle("-fx-text-fill: transparent");
+			M16.setStyle("-fx-text-fill: transparent");
+			startMG.setText("GAME IN PROGRESS...");
+		}
 	}
 	
-	public void MatchingGameButton(ActionEvent e) {
-		if (startMG.getText().equals("Game in progress...")) {
-			randomNum =  ThreadLocalRandom.current().nextInt(0, 8); //Random 0-7
-			M1.setText(shapes[randomNum]);
+	public void MatchingGameButton(ActionEvent e) throws InterruptedException {
+		if (startMG.getText().equals("CLICK TO RANDOMIZE CARDS")) {
+			mgButtons = new ArrayList<Button>(List.of(M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M12, M13, M14, M15, M16)); //intialize arraylist of buttons
+			//Randomize position of buttons/pairs of buttons
+			for (int i = 0; i < 8; i++) {
+				randomButton =  ThreadLocalRandom.current().nextInt(0, mgButtons.size()); //Random 0-16
+				mgButtons.get(randomButton).setText(shapes[i]);
+				mgButtons.remove(randomButton);
+				randomButton =  ThreadLocalRandom.current().nextInt(0, mgButtons.size()); //Random 0-15
+				mgButtons.get(randomButton).setText(shapes[i]);
+				mgButtons.remove(randomButton);
+			}
+			startMG.setText("CLICK TO BEGIN MATCHING");
+		}
+		
+		if (e.getSource().equals(M1)) {
+			M1.setStyle("-fx-text-fill: black");
+			cardsFlipped += 1;
+			matchTestArray.add(M1);
+		}
+		if (e.getSource().equals(M2)) {
+			M2.setStyle("-fx-text-fill: black");
+			cardsFlipped += 1;
+			matchTestArray.add(M2);
+		}
+		if (e.getSource().equals(M3)) {
+			M3.setStyle("-fx-text-fill: black");
+			cardsFlipped += 1;
+			matchTestArray.add(M3);
+		}
+		if (e.getSource().equals(M4)) {
+			M4.setStyle("-fx-text-fill: black");
+			cardsFlipped += 1;
+			matchTestArray.add(M4);
+		}
+		if (e.getSource().equals(M5)) {
+			M5.setStyle("-fx-text-fill: black");
+			cardsFlipped += 1;
+			matchTestArray.add(M5);
+		}
+		if (e.getSource().equals(M6)) {
+			M6.setStyle("-fx-text-fill: black");
+			cardsFlipped += 1;
+			matchTestArray.add(M6);
+		}
+		if (e.getSource().equals(M7)) {
+			M7.setStyle("-fx-text-fill: black");
+			cardsFlipped += 1;
+			matchTestArray.add(M7);
+		}
+		if (e.getSource().equals(M8)) {
+			M8.setStyle("-fx-text-fill: black");
+			cardsFlipped += 1;
+			matchTestArray.add(M8);
+		}
+		if (e.getSource().equals(M9)) {
+			M9.setStyle("-fx-text-fill: black");
+			cardsFlipped += 1;
+			matchTestArray.add(M9);
+		}
+		if (e.getSource().equals(M10)) {
+			M10.setStyle("-fx-text-fill: black");
+			cardsFlipped += 1;
+			matchTestArray.add(M10);
+		}
+		if (e.getSource().equals(M11)) {
+			M11.setStyle("-fx-text-fill: black");
+			cardsFlipped += 1;
+			matchTestArray.add(M11);
+		}
+		if (e.getSource().equals(M12)) {
+			M12.setStyle("-fx-text-fill: black");
+			cardsFlipped += 1;
+			matchTestArray.add(M12);
+		}
+		if (e.getSource().equals(M13)) {
+			M13.setStyle("-fx-text-fill: black");
+			cardsFlipped += 1;
+			matchTestArray.add(M13);
+		}
+		if (e.getSource().equals(M14)) {
+			M14.setStyle("-fx-text-fill: black");
+			cardsFlipped += 1;
+			matchTestArray.add(M14);
+		}
+		if (e.getSource().equals(M15)) {
+			M15.setStyle("-fx-text-fill: black");
+			cardsFlipped += 1;
+			matchTestArray.add(M15);
+		}
+		if (e.getSource().equals(M16)) {
+			M16.setStyle("-fx-text-fill: black");
+			cardsFlipped += 1;
+			matchTestArray.add(M16);
+		}
+		
+		//Check if matching or not
+		if (cardsFlipped == 2 && matchTestArray.get(0).getText().equals(matchTestArray.get(1).getText())) {
+			cardsFlipped = 0;
+			matched += 1;
+			matchTestArray.get(1).setOnAction(null);
+			matchTestArray.get(0).setOnAction(null);
+			matchTestArray.remove(1);
+			matchTestArray.remove(0);
+		}
+		else if (cardsFlipped == 2) {
+			KeyFrame k01 = new KeyFrame(Duration.seconds(0), new KeyValue(matchTestArray.get(0).styleProperty(), "-fx-text-fill: black"));
+			KeyFrame k02 = new KeyFrame(Duration.seconds(1), new KeyValue(matchTestArray.get(0).styleProperty(), "-fx-text-fill: transparent"));
+			KeyFrame k11 = new KeyFrame(Duration.seconds(0), new KeyValue(matchTestArray.get(1).styleProperty(), "-fx-text-fill: black"));
+			KeyFrame k12 = new KeyFrame(Duration.seconds(1), new KeyValue(matchTestArray.get(1).styleProperty(), "-fx-text-fill: transparent"));
+			
+			Timeline anim0 = new Timeline(k01, k02);
+			Timeline anim1 = new Timeline(k11, k12);
+			anim0.play();
+			anim1.play();
+			
+			cardsFlipped = 0;
+			matchTestArray.remove(1);
+			matchTestArray.remove(0);
+		}
+		
+		//Check completion
+		if (matched == 8) {
+			reactionTime = System.currentTimeMillis() - startTime;
+			startMG.setText("COMPLETE: " + (reactionTime/1000) + "s");
 		}
 	}
 }

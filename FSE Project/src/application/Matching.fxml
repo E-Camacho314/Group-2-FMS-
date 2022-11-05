@@ -20,9 +20,9 @@
                   <Insets left="14.0" />
                </padding>
             </Label>
-            <Button fx:id="startMG" mnemonicParsing="false" onAction="#MatchingGame" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: transparent;" text="START" textAlignment="CENTER">
+            <Button fx:id="startMG" mnemonicParsing="false" onAction="#MatchingGame" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: transparent;" text="CLICK TO RANDOMIZE CARDS" textAlignment="CENTER">
                <font>
-                  <Font size="40.0" />
+                  <Font size="25.0" />
                </font>
             </Button>
          </children>
@@ -40,39 +40,19 @@
          <children>
             <HBox prefHeight="137.5" prefWidth="400.0">
                <children>
-                  <Button fx:id="M1" mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-color: BLACK;" text=" " textAlignment="CENTER">
+                  <Button fx:id="M1" mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" text=" " textAlignment="CENTER">
                      <font>
                         <Font size="40.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-color: BLACK;" text=" " textAlignment="CENTER">
+                  <Button fx:id="M2" mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" text=" " textAlignment="CENTER">
                      <font>
                         <Font size="40.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-color: BLACK;" text=" " textAlignment="CENTER">
+                  <Button fx:id="M3" mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" text=" " textAlignment="CENTER">
                      <font>
                         <Font size="40.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-color: BLACK;" text=" " textAlignment="CENTER">
-                     <font>
-                        <Font size="40.0" />
-                     </font></Button>
-               </children>
-            </HBox>
-            <HBox prefHeight="137.5" prefWidth="400.0">
-               <children>
-                  <Button mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-color: BLACK;" text=" " textAlignment="CENTER">
-                     <font>
-                        <Font size="40.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-color: BLACK;" text=" " textAlignment="CENTER">
-                     <font>
-                        <Font size="40.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-color: BLACK;" text=" " textAlignment="CENTER">
-                     <font>
-                        <Font size="40.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-color: BLACK;" text=" " textAlignment="CENTER">
+                  <Button fx:id="M4" mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" text=" " textAlignment="CENTER">
                      <font>
                         <Font size="40.0" />
                      </font></Button>
@@ -80,19 +60,19 @@
             </HBox>
             <HBox prefHeight="137.5" prefWidth="400.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-color: BLACK;" text=" " textAlignment="CENTER">
+                  <Button fx:id="M5" mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" text=" " textAlignment="CENTER">
                      <font>
                         <Font size="40.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-color: BLACK;" text=" " textAlignment="CENTER">
+                  <Button fx:id="M6" mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" text=" " textAlignment="CENTER">
                      <font>
                         <Font size="40.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-color: BLACK;" text=" " textAlignment="CENTER">
+                  <Button fx:id="M7" mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" text=" " textAlignment="CENTER">
                      <font>
                         <Font size="40.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-color: BLACK;" text=" " textAlignment="CENTER">
+                  <Button fx:id="M8" mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" text=" " textAlignment="CENTER">
                      <font>
                         <Font size="40.0" />
                      </font></Button>
@@ -100,19 +80,39 @@
             </HBox>
             <HBox prefHeight="137.5" prefWidth="400.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-color: BLACK;" text=" " textAlignment="CENTER">
+                  <Button fx:id="M9" mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" text=" " textAlignment="CENTER">
                      <font>
                         <Font size="40.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-color: BLACK;" text=" " textAlignment="CENTER">
+                  <Button fx:id="M10" mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" text=" " textAlignment="CENTER">
                      <font>
                         <Font size="40.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-color: BLACK;" text=" " textAlignment="CENTER">
+                  <Button fx:id="M11" mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" text=" " textAlignment="CENTER">
                      <font>
                         <Font size="40.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-color: BLACK;" text=" " textAlignment="CENTER">
+                  <Button fx:id="M12" mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" text=" " textAlignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="137.5" prefWidth="400.0">
+               <children>
+                  <Button fx:id="M13" mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" text=" " textAlignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font></Button>
+                  <Button fx:id="M14" mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" text=" " textAlignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font></Button>
+                  <Button fx:id="M15" mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" text=" " textAlignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font></Button>
+                  <Button fx:id="M16" mnemonicParsing="false" onAction="#MatchingGameButton" prefHeight="137.5" prefWidth="100.0" text=" " textAlignment="CENTER">
                      <font>
                         <Font size="40.0" />
                      </font></Button>
