@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <top>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="100.0" prefWidth="400.0" text="   Reaction Game">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+            </Label>
+            <Label fx:id="timeLbl" prefHeight="100.0" prefWidth="400.0" text="" textAlignment="CENTER">
+               <font>
+                  <Font size="32.0" />
+               </font>
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="550.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="183.33" prefWidth="400.0">
+               <children>
+                  <Button fx:id="B1" mnemonicParsing="false" onAction="#rgHandler" prefHeight="197.0" prefWidth="133.33" style="-fx-background-color: BLACK;" />
+                  <Button fx:id="B2" mnemonicParsing="false" onAction="#rgHandler" prefHeight="224.0" prefWidth="133.33" style="-fx-background-color: GREEN;" />
+                  <Button fx:id="B3" mnemonicParsing="false" onAction="#rgHandler" prefHeight="183.33" prefWidth="133.33" style="-fx-background-color: BLUE;" />
+               </children>
+            </HBox>
+            <HBox prefHeight="183.33" prefWidth="400.0">
+               <children>
+                  <Button fx:id="B4" mnemonicParsing="false" onAction="#rgHandler" prefHeight="212.0" prefWidth="133.33" style="-fx-background-color: PURPLE;" />
+                  <Button fx:id="B5" mnemonicParsing="false" onAction="#rgHandler" prefHeight="203.0" prefWidth="133.33" style="-fx-background-color: WHITE;" text="CLICK TO START" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font></Button>
+                  <Button fx:id="B6" mnemonicParsing="false" onAction="#rgHandler" prefHeight="218.0" prefWidth="133.33" style="-fx-background-color: RED;" />
+               </children>
+            </HBox>
+            <HBox prefHeight="183.33" prefWidth="400.0">
+               <children>
+                  <Button fx:id="B7" mnemonicParsing="false" onAction="#rgHandler" prefHeight="259.0" prefWidth="133.33" style="-fx-background-color: YELLOW;" />
+                  <Button fx:id="B8" mnemonicParsing="false" onAction="#rgHandler" prefHeight="254.0" prefWidth="133.33" style="-fx-background-color: BROWN;" />
+                  <Button fx:id="B9" mnemonicParsing="false" onAction="#rgHandler" prefHeight="219.0" prefWidth="133.33" style="-fx-background-color: ORANGE;" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <Button mnemonicParsing="false" onAction="#loadHome" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: DODGERBLUE;" text="Back" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Button>
+   </bottom>
+</BorderPane>
