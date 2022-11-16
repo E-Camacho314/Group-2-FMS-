@@ -20,9 +20,9 @@
    <top>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="100.0" prefWidth="400.0" text="Circle Tracing Game" textAlignment="CENTER">
+            <Label prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: DODGERBLUE;" text="Circle Tracing Game" textAlignment="CENTER">
                <font>
-                  <Font name="System Bold" size="40.0" />
+                  <Font size="40.0" />
                </font>
                <padding>
                   <Insets left="14.0" />

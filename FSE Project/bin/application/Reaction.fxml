@@ -12,7 +12,7 @@
    <top>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="100.0" prefWidth="400.0" text="   Reaction Game">
+            <Label prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: DODGERBLUE;" text="   Reaction Game">
                <font>
                   <Font name="System Bold" size="40.0" />
                </font>
@@ -20,7 +20,7 @@
                   <Insets left="22.0" />
                </padding>
             </Label>
-            <Label fx:id="timeLbl" prefHeight="100.0" prefWidth="400.0" text="" textAlignment="CENTER">
+            <Label fx:id="timeLbl" prefHeight="100.0" prefWidth="400.0" text="" textAlignment="CENTER" textFill="DODGERBLUE">
                <font>
                   <Font size="32.0" />
                </font>
@@ -44,7 +44,7 @@
             <HBox prefHeight="183.33" prefWidth="400.0">
                <children>
                   <Button fx:id="B4" mnemonicParsing="false" onAction="#rgHandler" prefHeight="212.0" prefWidth="133.33" style="-fx-background-color: PURPLE;" />
-                  <Button fx:id="B5" mnemonicParsing="false" onAction="#rgHandler" prefHeight="203.0" prefWidth="133.33" style="-fx-background-color: WHITE;" text="CLICK TO START" textAlignment="CENTER">
+                  <Button fx:id="B5" mnemonicParsing="false" onAction="#rgHandler" prefHeight="203.0" prefWidth="133.33" style="-fx-background-color: WHITE;" text="CLICK TO START" textAlignment="CENTER" textFill="DODGERBLUE">
                      <font>
                         <Font name="System Bold Italic" size="13.0" />
                      </font></Button>

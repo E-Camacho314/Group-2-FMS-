@@ -12,7 +12,7 @@
    <top>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="100.0" prefWidth="400.0" text="Matching Cards Game" textAlignment="CENTER">
+            <Label prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: DODGERBLUE;" text="Matching Cards Game" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="35.0" />
                </font>
@@ -20,7 +20,7 @@
                   <Insets left="14.0" />
                </padding>
             </Label>
-            <Button fx:id="startMG" mnemonicParsing="false" onAction="#MatchingGame" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: transparent;" text="CLICK TO RANDOMIZE CARDS" textAlignment="CENTER">
+            <Button fx:id="startMG" mnemonicParsing="false" onAction="#MatchingGame" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: transparent;" text="CLICK TO RANDOMIZE CARDS" textAlignment="CENTER" textFill="DODGERBLUE">
                <font>
                   <Font size="25.0" />
                </font>

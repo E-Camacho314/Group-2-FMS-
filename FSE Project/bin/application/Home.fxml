@@ -14,7 +14,7 @@
    <top>
       <HBox prefHeight="100.0" prefWidth="400.0" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="100.0" prefWidth="400.0" text="Main Menu">
+            <Label prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: DODGERBLUE;" text="Main Menu">
                <padding>
                   <Insets left="90.0" />
                </padding>
@@ -39,7 +39,7 @@
                         </Button>
                         <HBox prefHeight="163.0" prefWidth="400.0">
                            <children>
-                              <Label prefHeight="163.0" prefWidth="200.0" text="In this challenge you will practice &#10;your dexterity through tracing a &#10;circle as closely as possible" textAlignment="CENTER">
+                              <Label prefHeight="163.0" prefWidth="200.0" text="In this challenge you will practice &#10;your dexterity through tracing a &#10;circle as closely as possible" textAlignment="CENTER" textFill="DODGERBLUE">
                                  <padding>
                                     <Insets left="15.0" />
                                  </padding>
@@ -66,7 +66,7 @@
                         </Button>
                         <HBox prefHeight="163.0" prefWidth="400.0">
                            <children>
-                              <Label prefHeight="163.0" prefWidth="200.0" text="In this challenge you will practice &#10;your reaction time by selecting &#10;the correct circle when the game&#10;prompt appears" textAlignment="CENTER">
+                              <Label prefHeight="163.0" prefWidth="200.0" text="In this challenge you will practice &#10;your reaction time by selecting &#10;the correct circle when the game&#10;prompt appears" textAlignment="CENTER" textFill="DODGERBLUE">
                                  <padding>
                                     <Insets left="15.0" />
                                  </padding>
@@ -92,7 +92,7 @@
                         </Button>
                         <HBox prefHeight="163.0" prefWidth="400.0">
                            <children>
-                              <Label prefHeight="163.0" prefWidth="200.0" text="In this challenge you will practice &#10;your motor skills and cognitive &#10;skills by selecting matching tiles" textAlignment="CENTER">
+                              <Label prefHeight="163.0" prefWidth="200.0" text="In this challenge you will practice &#10;your motor skills and cognitive &#10;skills by selecting matching tiles" textAlignment="CENTER" textFill="DODGERBLUE">
                                  <padding>
                                     <Insets left="15.0" />
                                  </padding>
