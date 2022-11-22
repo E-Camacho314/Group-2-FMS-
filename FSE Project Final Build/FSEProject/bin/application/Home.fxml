@@ -108,7 +108,7 @@
                                     <Image url="@file:///C:/Users/jacst/eclipse-workspace/FSEProject/Matching.PNG" />
                                  </image>
                                  <HBox.margin>
-                                    <Insets left="99.0" top="1.0" />
+                                    <Insets left="90.0" top="1.0" />
                                  </HBox.margin>
                               </ImageView>
                            </children>
